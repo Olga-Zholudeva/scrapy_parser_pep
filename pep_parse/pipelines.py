@@ -10,7 +10,7 @@ class PepParsePipeline:
         self.statuses = defaultdict(int)
 
     def process_item(self, item, spider):
-        status = item["status"]
+        status = item['status']
         self.statuses[status] += 1
         return item
 
@@ -19,9 +19,9 @@ class PepParsePipeline:
         now_formatted = now.strftime(DATETIME_FORMAT)
         file_name = f'results/status_summary_{now_formatted}.csv'
         file_path = BASE_DIR / file_name
-        with open(file_path, 'w', encoding="utf-8") as f:
+        with open(file_path, 'w', encoding='utf-8') as f:
             writer = csv.writer(f)
-            writer.writerow(["Статус", "Количество"])
+            writer.writerow(['Статус', 'Количество'])
             writer.writerows(self.statuses.items())
             total = sum(self.statuses.values())
-            writer.writerow(["Total", total])
+            writer.writerow(['Total', total])
