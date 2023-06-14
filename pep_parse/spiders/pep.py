@@ -9,7 +9,7 @@ class PepSpider(scrapy.Spider):
     start_urls = ["https://peps.python.org/"]
 
     def parse(self, response):
-        """Парсим ссылки на страницы PEP и вызываем для них парсинг обработчик."""
+        """Парсим ссылки на страницы PEP и вызываем для них обработчик."""
 
         pep_links = response.css("section#numerical-index tr a::attr(href)")
         for link in pep_links:
