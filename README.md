@@ -13,10 +13,14 @@
 
 ## Запуск проекта:
 
-- Клонируем репозиторий: git clone https://github.com/Olga-Zholudeva/scrapy_parser_pep
+- [Клонируем репозиторий: git clone] (https://github.com/Olga-Zholudeva/scrapy_parser_pep)
 - Cоздаем и активировируем виртуальное окружение: python3 -m venv env source env/bin/activate
 - Устанавливаем зависимости из файла requirements.txt: pip install -r requirements.txt
 
 ## Получение результатов парсинга:
 
 - scrapy crawl pep
+
+## Проект выполнен:
+
+Ольга Жолудева
